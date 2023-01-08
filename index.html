@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tête de Livre</title>
+    <link rel="stylesheet" href="dist/src/css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__entete">
+            <img class="header__logo" src="assets/Icon/book.svg" alt="Icone de livre">
+            <h1 class="header__title">TêteLivre</h1>
+        </div>
+        <form class="header__form" action="">
+            <input class="header__search" type="search">
+            <button class="header__button" type="submit"><img class="header__icon" src="assets/Icon/search.svg" alt="Icone de loupe pour lancer la recherche"></button>
+        </form>
+    </header>
+    <main class="container">
+        <section class="profil">
+            <article class="profil__card card">
+                <div class="card__header">
+                    <h2 class="card__title">@John Doe</h2>
+                    <p class="card__subtitle">Full name : Jonathan Doenut</p>
+                    <p class="card__description">Developer of web applications, Javascript, Php, Java, Python, Ruby, Java, Node.js, etc.</p>
+                </div>
+                <div class="card__body">
+                    <div class="card__followers">
+                        <p class="card__text">Followers</p>
+                        <p class="card__number">52 342</p>
+                    </div>
+                    <div class="card__following">
+                        <p class="card__text">Following</p>
+                        <p class="card__number">6758</p>
+                    </div>
+                    <div class=card__link>
+                        <a class="card__lien" href="#">Vestibulum at eros</a>
+                    </div>
+                </div>            
+            </article>
+        </section>
+        <section class="principal" id="principal">
+            <form class="publication">
+                <div class="publication__lien">
+                    <a class="publication__link openlink" href="#" id="link__make" data-id="1">Make a publication</a>
+                    <a class="publication__link" href="#" id="link__image" data-id="2">Images</a>
+                </div>
+                <div class="publication__make open" id="modal__make">
+                    <textarea class="publication__textarea" name="publication" id="publication" cols="30" rows="10" placeholder="What are you thinking ?"></textarea>
+                </div>
+                <div class="publication__image" id="modal__image">
+
+                    <input class="publication__input" type="file" accept="image/png, image/jpeg" value="Parcourir"> 
+                    <button class="publication__upload" type="submit">Upload image</button>
+                </div>
+                <div class="publication__buttons">
+                    <button class="publication__button" type="submit">share</button>
+                    <button id="dropdown" class="publication__dropdown"><img class="publication__icon" src="assets/Icon/globebleu.svg" alt="Icône de planète"></button>
+                    <div id="dropdownmenu" class="publication__menu">
+                        <ul class="publication__list">
+                            <li class="publication__select" value="Public">
+                                <a class="publication__menuselect" href="#">
+                                    <img class="publication__icon" src="assets/Icon/globe.svg" alt="">
+                                    <span class="publication__span">Public</span>
+                                </a>
+                            </li>
+                            <li class="publication__select" value="Friends">
+                                <a class="publication__menuselect" href="#">
+                                    <img class="publication__icon" src="assets/Icon/people-fill.svg" alt="Icône de plusieurs personnes">
+                                    <span class="publication__span">Friends</span>
+                                </a>
+                            </li>
+                            <li class="publication__select" value="Just Me">
+                                <a class="publication__menuselect" href="#">
+                                    <img class="publication__icon publication__icon--width" src="assets/Icon/person-fill.svg" alt="Icône d'une personne">
+                                    <span class="publication__span">Just Me</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>                
+                </div>
+            </form>
+        </section>
+        <aside class="aside">
+            <article class="aside__carte carte">
+                <div class="carte__header">
+                    <h2 class="carte__title">Card title</h2>
+                    <p class="carte__subtitle">Card subtitle</p>
+                </div>
+                <div class="carte__body">
+                    <p class="carte__description">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+                </div>
+                <div class="carte__link">
+                    <a class="carte__lien" href="">Card link</a>
+                    <a class="carte__lien" href="">Another link</a>
+                </div>
+            </article>
+            <article class="aside__carte carte">
+                <div class="carte__header">
+                    <h2 class="carte__title">Card title</h2>
+                    <p class="carte__subtitle">Card subtitle</p>
+                </div>
+                <div class="carte__body">
+                    <p class="carte__description">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+                </div>
+                <div class="carte__link">
+                    <a class="carte__lien" href="">Card link</a>
+                    <a class="carte__lien" href="">Another link</a>
+                </div>
+            </article>
+        </aside>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

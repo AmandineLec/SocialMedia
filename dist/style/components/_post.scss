@@ -1,0 +1,139 @@
+.post {
+    grid-column: 1/ span 8;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin-bottom : 20px; 
+    border : solid 2px $darkgrey;
+    border-radius: 10px; 
+    margin : {
+        left : 20px; 
+        right : 20px;
+    }
+    &__header {
+        grid-column: 1/ span 8;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        background-color: $grey;
+        grid-template-rows: 40px 40px;
+        padding : 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &__author {
+        grid-column: 2/ span 8;
+        grid-row: 1/ span 1;
+        margin : 0;
+        margin-top : 15px; 
+    }
+    &__subtitle {
+        grid-column: 2/ span 8;
+        grid-row: 2/ span 1;
+        margin : 0; 
+        margin-top :5px;
+        color : $darkgrey;
+    }
+    &__body{
+        grid-column: 1/ span 8;
+    }
+    &__link {
+        grid-column: 1/ span 8;
+        display: flex;
+        background-color: $grey;
+        padding : 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    &__select {
+        position : absolute;
+        right : 2%; 
+        border: 2px solid $darkgrey;
+        border-radius: 5px; 
+        background-color: white;
+        color : black;
+        font-size: 20px;
+        visibility: hidden;
+        margin-top : 65px; 
+    }
+    &__img {
+        height : 70px;
+        object-fit: cover;
+        padding : 10px;
+        grid-column: 1/ span 1;
+        grid-row: 1/ span 2;
+        border-radius: 50%;
+    }
+    &__icon {
+        height : 20px;
+        margin-right : 5px;
+    }
+    &__lien {
+        display: flex;
+        flex-direction: row-reverse;
+        color : blue; 
+        margin-right : 10px; 
+    }
+    &__datecontainer {
+        display: flex;
+        margin-left: 20px;
+    }
+    &__date {
+        color : $subtitle;
+    }
+    &__title {
+        color : $blue; 
+        margin-left : 20px; 
+        font-size : 18px; 
+        margin-top : 0; 
+    }
+    &__description {
+        margin : {
+            left : 20px; 
+            right : 20px; 
+        }
+        font-size: 16px;
+    }
+    &__buttonselect {
+        position : absolute;
+        right : 8%;
+        margin-top : 35px;
+        color : $blue; 
+        font-size: 20px;
+    }
+    &__list {
+        padding : 0; 
+        padding-left : 10px;
+        padding-right : 40px;
+    }
+    &__option {
+        padding : 5px; 
+    }
+    &__configuration {
+        color : $darkgrey;
+    }
+}
+
+.post__buttonselect:hover {
+    border : solid 2px $hover;
+    border-radius: 5px;
+}
+
+
+.post__icon--clock {
+    width : initial;
+}
+
+.openmenu {
+    visibility: visible;
+}
+
+@media (min-width : 1000px) {
+    .post {
+        &__buttonselect {
+            right : 29%;
+        }
+        &__select {
+            right : 19%; 
+            margin-top : 62px; 
+        }
+    }
+}

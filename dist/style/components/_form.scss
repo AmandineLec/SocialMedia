@@ -1,0 +1,153 @@
+.publication {
+    grid-column: 1/ span 8;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 50px 180px 50px;
+    border : solid 1px $darkgrey;
+    border-radius: 10px;
+    margin : 20px;
+    &__lien {
+        grid-column: 1/ span 8;
+        display: flex;
+        grid-row: 1/ span 1;
+        justify-content: flex-start;
+        background-color: $grey;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &__link {
+        grid-column: 1/ span 3;
+        color : $blue;
+        margin : {
+            left: 20px;
+            top : 5px;
+        }
+        padding: 20px;
+    }
+    &__make {
+        grid-column: 1/span 8;
+        display : grid; 
+        grid-template-columns: repeat(8, 1fr);
+        margin : 10px; 
+        background-color: white;
+        grid-row: 2/span 1;
+        visibility : hidden; 
+    }
+    &__textarea {
+        grid-column: 1/ span 8;
+        margin : 10px; 
+        border: 1px solid $darkgrey;
+        border-radius: 5px;
+    }
+    &__image {
+        visibility : hidden;
+        grid-column: 1/ span 8;
+        grid-row: 2/span 1;
+        display : grid; 
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    &__buttons {
+        grid-row: 3/ span 1;
+        grid-column: 1/ span 8;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+    &__button {
+        background-color: $blue;
+        height : 35px; 
+        border-radius: 5px;
+        color : white;
+        padding : 5px;
+        grid-column: 1/ span 1;
+        margin-left: 20px;
+    }
+    &__dropdown{
+        margin : {
+            right : 20px;
+            bottom : 20px;
+        }
+        position : absolute; 
+        right : 5%; 
+    }
+    &__menu {
+        display: none;
+    }
+    &__list {
+        padding : 0; 
+        margin-left: 20px;
+    }
+    &__select {
+        margin : {
+            bottom : 20px;
+        }
+    }
+    &__menuselect{
+        color : black; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &__icon {
+        height : 25px; 
+        grid-column: 1/ span 1;
+    }
+    &__input {
+        grid-column: 1/ span 3;
+        margin : {
+            left : 20px;
+            top : 20px;
+        }
+        height : 30px;
+        grid-row: 1/ span 1;
+    }
+    &__upload{
+        grid-column: 5/span 2;
+        grid-row: 1/ span 1;
+        height : 30px; 
+        margin : {
+            left : 20px;
+            top : 20px;
+        }
+        width: 100%; 
+        color : $blue;
+        border : solid 1px $blue;
+    }
+    &__span {
+        grid-column: 2/ span 2;
+        margin-left : 5px; 
+    }
+}
+.open {
+    visibility : visible; 
+}
+.active {
+    display: initial;
+    z-index : 4;
+    margin : {
+        bottom : 20px;
+    }
+    background-color: white;
+    position : absolute;
+    right : 0%; 
+    margin-top : 30px; 
+    width : 170px; 
+    padding : 10px; 
+}
+
+.openlink {
+    background-color : white;
+    color : black;
+}
+
+
+@media (min-width : 1000px) {
+    .publication {
+        grid-column: 1/ span 8;
+        &__dropdown {
+            right : 27%;
+        }
+    }
+    .active {
+        right : 20%; 
+    }
+}

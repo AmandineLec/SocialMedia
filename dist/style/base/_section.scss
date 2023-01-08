@@ -1,0 +1,27 @@
+.profil {
+    grid-column: 1/ span 8;
+    display : grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.principal {
+    grid-column: 1/ span 8;
+    display : grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.aside {
+    grid-column: 1/ span 8;
+}
+
+@media (min-width : 1000px) {
+    .profil {
+        grid-column: 1/ span 3;
+    }
+    .principal {
+        grid-column: 4/ span 6;
+    }
+    .aside {
+        grid-column: 10/ span 3;
+    }
+}

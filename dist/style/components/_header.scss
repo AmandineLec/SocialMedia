@@ -1,0 +1,67 @@
+.header {
+    grid-column: 1/ span 8;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    background-color: $grey;
+    &__entete {
+        grid-column: 1/span 2;
+        margin : {
+            left : 20px
+        }
+        display: flex;
+    }
+    &__title {
+        font-weight: normal;
+    }
+    &__logo {
+        height : 30px;
+        width : inherit;
+        margin : {
+            top : 25px;
+            left : 20px;
+            right : 5px; 
+        }
+    }
+    &__form {
+        grid-column: 5/span 4;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin : {
+            top : 25px; 
+        }
+    }
+    &__search {
+        grid-column: 1/span 4;
+        height : 40px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border : solid 1px $darkgrey;
+        width : 90%; 
+        justify-self: end; 
+    }
+    &__button {
+        grid-column: 5/ span 1;
+        height : 40px;
+        border : solid 1px $blue; 
+        width : 60%; 
+        border-radius: 5px;
+    }
+    &__icon {
+        height : 25px;
+        padding : 2px; 
+    }
+
+}
+
+@media (min-width : 1000px) {
+    .header {
+        grid-column:  1/ span 12;
+        grid-template-columns: repeat(12, 1fr);
+        &__form {
+            grid-column: 9/span 4;
+        }
+        &__search {
+            width : 70%; 
+        }
+    } 
+}

@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    margin : 0; 
+    font-family: $font;
+}
+
+body .modal__make {
+    overflow : visible; 
+}
+
+img {
+    width : 100%
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    grid-column: 1/span 8;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+button {
+    background-color: transparent; 
+    border : none;
+}
+
+@media (min-width : 1000px) {
+    body {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .container {
+        grid-column: 1/span 12;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}

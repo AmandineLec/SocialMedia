@@ -1,0 +1,39 @@
+.carte {
+    grid-column: 1/ span 8;
+    padding: {
+        left : 20px;
+        top : 20px;
+        bottom : 20px
+    }
+    margin : {
+        right : 20px; 
+        top : 20px;
+        left : 20px; 
+    }
+    border : solid 1px $darkgrey;
+    border-radius: 10px;
+    &__subtitle {
+    color : $subtitle;
+    margin : 0; 
+    }
+    &__lien {
+        color : $blue;
+        margin-right : 20px; 
+    }
+    &__title {
+        margin : 0; 
+        margin-bottom : 5px; 
+    }
+}
+
+@media (min-width : 1150px) {
+    .carte {
+        height : 200px;
+    }
+}
+
+@media (min-width : 1000px) {
+    .carte {
+        height : 220px;
+    }
+}
